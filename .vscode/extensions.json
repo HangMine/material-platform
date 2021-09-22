@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "msjsdiag.debugger-for-edge",
+    "ms-edgedevtools.vscode-edge-devtools",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "octref.vetur",
+    "eamodio.gitlens",
+    "syler.sass-indented",
+    "antfu.i18n-ally",
+    "codeinchinese.chineseinputassistant",
+    "msjsdiag.debugger-for-chrome",
+    "redhat.vscode-yaml",
+    "ms-vscode.vscode-typescript-next",
+    "fabiospampinato.vscode-highlight",
+    "fabiospampinato.vscode-todo-plus"
+  ]
+}

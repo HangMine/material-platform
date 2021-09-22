@@ -1,0 +1,42 @@
+image: node:10.16
+
+stages:
+  - install
+  - build
+  - deploy
+
+cache:
+  key: npm-cache
+  paths:
+    - node_modules/
+
+install:
+  stage: install
+  only:
+    - tags
+  except:
+    - branches
+  script:
+    - npm install --verbose
+
+
+build:
+  stage: build
+  only:
+    - tags
+  except:
+    - branches
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - node ./cli build --refName ${CI_COMMIT_REF_NAME}
+
+upload:
+  stage: deploy
+  only:
+    - tags
+  except:
+    - branches
+  script:
+    - node ./cli deploy --refName ${CI_COMMIT_REF_NAME}

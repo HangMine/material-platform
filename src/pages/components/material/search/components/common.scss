@@ -1,0 +1,76 @@
+@mixin filterUl (){
+  .filter-ul {
+    padding: 30px 30px 20px 30px;
+    &.more-filter {
+      position: absolute;
+      padding-top: 10px;
+      bottom: -5px;
+      width: 100%;
+      background-color: white;
+    }
+    .filter-li {
+      display: flex;
+      align-items: flex-start;
+      + .filter-li {
+        padding-top: 15px;
+      }
+      .title {
+        display: flex;
+        justify-content: flex-end;
+        color: #222222;
+        line-height: 20px;
+        font-weight: bold;
+        width: 85px;
+        flex-shrink: 0;
+        padding-top: 3px;
+
+      }
+      .options-ul {
+        padding-left: 15px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .options-li {
+          display: flex;
+          align-items: center;
+          padding: 4px 12px;
+          cursor: pointer;
+          border-radius: 4px;
+          transition: all 0.2s;
+
+          .color {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 2px;
+          }
+
+          + .options-li {
+            margin-left: 5px;
+          }
+          &.active {
+            color: #10b0a9;
+            background: rgba(33, 191, 184, 0.1);
+          }
+        }
+      }
+      .year-season {
+        .options-li {
+          margin-bottom: 15px;
+        }
+      }
+      .more {
+        cursor: pointer;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        > i {
+          font-size: 12px;
+          padding-left: 3px;
+        }
+      }
+    }
+  }
+}

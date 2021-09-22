@@ -1,0 +1,31 @@
+.user-info{
+  line-height: initial;
+
+  &.no-title{
+    .user-img{
+      margin-right: 0;
+    }
+  }
+  .user-img{
+    width: 40px;
+    height: 40px;
+    margin-right: 11px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  // .user-img{
+  //   width: 40px;
+  //   height: 40px;
+  //   margin-right: 11px;
+  //   border-radius: 50%;
+  // }
+  .title{
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .des{
+    font-size: 12px;
+    color: #999999;
+    margin-top: 2px;
+  }
+}

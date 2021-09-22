@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "vuejs: chrome",
+      "url": "http://localhost:9200",
+      "webRoot": "${workspaceFolder}/src",
+      "breakOnLoad": true,
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*",
+        "webpack:///./src/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "启动开发服务",
+      "targetTypes": [
+        "page"
+      ]
+    },
+    {
+      "type": "edge",
+      "request": "launch",
+      "name": "vuejs: Edge",
+      "url": "http://localhost:9200",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*",
+        "webpack:///./src/*": "${webRoot}/*"
+      },
+      "trace": "verbose",
+      "preLaunchTask": "启动开发服务",
+    }
+  ]
+}
